@@ -1,7 +1,8 @@
 import app from '../src/app';
 import request from 'supertest';
-// import {Article, Author} from '../src/types/LocalTypes';
-// import randomstring from 'randomstring';
+// import { Article, Author } from '../src/types/LocalTypes';
+import {Article, Author} from '../src/types/LocalTypes';
+import randomstring from 'randomstring';
 
 // test that server is running
 describe('GET /', () => {
@@ -10,7 +11,7 @@ describe('GET /', () => {
   });
 });
 
-/* TODO: Remove this line to start the integration tests
+// TODO: Remove this line to start the integration tests
 // Create new article for testing
 const article: Article = {
   id: 1, // some random id
@@ -205,4 +206,4 @@ describe('Delete test data', () => {
     await request(app).delete(`/api/v1/authors/${author.id}`).expect(204);
   });
 });
-TODO: Remove this line to start the integration tests */
+//TODO: Remove this line to start the integration tests 
