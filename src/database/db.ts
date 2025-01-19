@@ -11,7 +11,7 @@ db.exec(tables);
 const rowCount = (db.prepare(checkData).get() as {count: number}).count;
 // If the table is empty, insert example data
 if (rowCount === 0) {
-  db.prepare(exampleData).run();
+  db.exec(exampleData);
   console.log('Inserted example data.');
 } else {
   console.log('Table already populated.');
